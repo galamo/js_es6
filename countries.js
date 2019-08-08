@@ -37,21 +37,29 @@ const hasBordersNames = countries
     .map(country => country.name)
 
 
-console.log(hasBordersOnlyNames)
+// console.log(hasBordersOnlyNames)
 
 //find 
 // return exactly 1 item according to the boolean result
-const item = hasBordersOnlyNames.find((countryName) => { return countryName === "Israel" })
-const item2 = hasBordersOnlyNames.find((countryName) => { return countryName === "USA" })
+// const item = hasBordersOnlyNames.find((countryName) => { return countryName === "Israel" })
+// const item2 = hasBordersOnlyNames.find((countryName) => { return countryName === "USA" })
 
-console.log(item, "found!!!")
+// console.log(item, "found!!!")
 
-
-
-//sum all population - the wrong way
-// let allPop = 0
-const countriesNewWIthSum = countries
-    .map(country => {
-        // allPop += country.population
-        return country.population;
+const getNames = (country) => {
+    return country.borders.map(border => {
+        const foundCountry = countries.find((country) => country.alpha3Code === border)
+        return foundCountry.name
     })
+}
+
+const result2 = countries.
+    filter(country => country.borders.length)
+    .map(country => {
+        const namesOfBorders = getNames(country);
+        return { name: country.name, borders: namesOfBorders }
+    })
+
+
+console.log(result2)
+
