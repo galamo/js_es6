@@ -9,8 +9,8 @@ countries.forEach((country) => {
     sum += country.population
 })
 
-console.log(countriesNames)
-console.log(sum)
+// console.log(countriesNames)
+// console.log(sum)
 
 
 //map 
@@ -22,7 +22,7 @@ const newCountries = countries.map((country, index) => {
 })
 
 
-console.log(newCountries)
+// console.log(newCountries)
 
 
 //filter
@@ -61,5 +61,5 @@ const result2 = countries.
     })
 
 
-console.log(result2)
+// console.log(result2)
 

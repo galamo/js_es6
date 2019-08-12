@@ -1,4 +1,4 @@
-console.log(sayHi("Gal"))
+// console.log(sayHi("Gal"))
 function sayHi(name) {
     // return `Hello ${name}`
     // return "Hello ${name" + name + " How are you? my name is: " + robot;
@@ -24,7 +24,7 @@ sayHiOnConst("Gan")
 const sayHiArrow = (name) => `Hello ${name} how are you ? my name is ${getRobotName()}`
 // console.log(getId())
 const getId = () => `id_${Math.random() * 999}`;
-console.log(getId())
+// console.log(getId())
 
 sayHiArrow()
 
